@@ -1,0 +1,40 @@
+
+DATASET OVERVIEW
+================
+Total Patients: 15,000
+Features: 30
+30-Day Readmission Rate: 28.4%
+
+DEMOGRAPHICS
+============
+Mean Age: 64.5 years (SD: 15.0)
+Sex Distribution: 47.8% Male, 52.2% Female
+
+CLINICAL FEATURES
+=================
+Mean Comorbidities: 2.9 (SD: 1.2)
+Mean Medications: 4.5 (SD: 2.2)
+Mean Length of Stay: 4.5 days (SD: 3.9)
+
+PRIOR UTILIZATION
+=================
+Mean Prior Admissions (6mo): 0.80
+Mean Prior ED Visits (6mo): 1.50
+
+KEY FINDINGS
+============
+1. Readmission rates vary significantly by age group, with peaks at both young and elderly patients
+2. Prior admissions (6mo) show strong association with 30-day readmission (strong positive correlation)
+3. Discharge disposition is important: SNF/assisted living have higher readmission rates than home discharge
+4. Weekend discharges may be a risk factor (follow-up care less available)
+5. Lab values show expected missingness patterns (>10% for HbA1c, ~10% for others)
+6. Class imbalance (83% vs 17%) requires careful handling in modeling
+
+DATA QUALITY
+============
+Missing Data:
+- Demographics: Minimal (<1%)
+- Lab values: 10-15% (realistic for hospital data)
+- Prior utilization: <5%
+
+Outliers: Length of stay outliers present but clinically plausible (up to 90 days)
