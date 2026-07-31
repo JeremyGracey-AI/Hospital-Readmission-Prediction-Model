@@ -17,6 +17,7 @@ This project demonstrates a complete end-to-end ML pipeline for predicting 30-da
 - [Results Summary](#results-summary)
 - [Implementation Guide](#implementation-guide)
 - [Key Insights](#key-insights)
+- [Tech Stack](#tech-stack)
 - [Technical Details](#technical-details)
 - [References](#references)
 
@@ -203,8 +204,9 @@ This project implements a **clinical prediction model** that:
 ### Installation
 
 ```bash
-cd project4-readmission-prediction
-pip install -r requirements.txt
+git clone https://github.com/JeremyGracey-AI/Hospital-Readmission-Prediction-Model.git
+cd Hospital-Readmission-Prediction-Model
+pip install pandas numpy scikit-learn xgboost imbalanced-learn shap matplotlib seaborn
 ```
 
 ### Running the Full Pipeline
@@ -272,28 +274,7 @@ results/
 
 ## Project Structure
 
-### Source Code (`src/`)
-
-**`data_generator.py`** (300+ lines)
-- `ClinicalDataGenerator`: Generates synthetic patient data with clinical realism
-- Features clinically correlated comorbidities, realistic distributions
-- Configurable readmission rate, missing data patterns
-- Well-documented with clinical reasoning
-
-**`feature_pipeline.py`** (200+ lines)
-- `ClinicalFeatureEngineering`: Production-ready feature engineering
-- Charlson Comorbidity Index calculator
-- LACE Index calculator
-- Clinical missing data imputation strategy
-- Lab value transformations with abnormality flags
-
-**`model_utils.py`** (150+ lines)
-- Model evaluation metrics calculation
-- Plot generation functions (ROC, PR, confusion matrices, calibration)
-- Results export utilities
-- Clinical decision curve analysis
-
-### Notebooks (`notebooks/`)
+### Stage scripts (`notebooks/`)
 
 **`01_data_exploration.py`** (400+ lines)
 - Generate synthetic data
@@ -434,6 +415,12 @@ At current volume (~3,000 annual discharges):
 
 ---
 
+## Tech Stack
+
+Python, with pandas and NumPy for data work, scikit-learn for baselines and tuning, XGBoost as the primary model, imbalanced-learn for SMOTE, SHAP for interpretability, and matplotlib/seaborn for plots.
+
+---
+
 ## Technical Details
 
 ### Feature Engineering Methodology
@@ -528,7 +515,6 @@ At current volume (~3,000 annual discharges):
 ## Author & Acknowledgments
 
 **Portfolio Project**: Jeremy Gracey
-**Role**: Healthcare Data Scientist / ML Engineer (Mid-Career Transition)
 **Background**: Clinical experience (Anesthesia Tech, Psychiatric Assistant), MS Psychology, AI/ML Certificate (UT Austin)
 
 This project demonstrates a complete ML pipeline with production-quality code, clinical domain knowledge, and practical implementation guidance suitable for healthcare deployment.
@@ -541,5 +527,5 @@ This project is for educational and portfolio purposes. Use appropriately with i
 
 ---
 
-**Last Updated**: 2024
+**Last Updated**: July 2026
 **Questions?** See documentation in notebooks and clinical reports.
